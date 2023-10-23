@@ -237,7 +237,6 @@ def main():
     #Scrape detail from each bout
     tabulate_bout_list = ['BOUT #','FIGHTER','RANKING','RECORD','BETTING ODDS','PREDICTION','AGE AT FIGHT', 'LAST WEIGH-IN', 'HEIGHT', 'REACH', 'NATIONALITY']
     bout_details_list = scrape_bout_details_list(bout_url_list)
-    print(f'bout_details_list type: {type(bout_details_list)}')
     fig_event = Figlet(font='small')
     fig_headliner = Figlet(font='slant')
     print(f'{fig_event.renderText(user_event[1])} - {fig_headliner.renderText(user_event[2])}')
@@ -246,12 +245,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-"""
-OUTSTANDING
-- contains "weigh"
-- look into grouping each bout for visual simplicity
-- do something with the numerical values we've received
-- use rich to highlight differences
-- refine user input
-"""
